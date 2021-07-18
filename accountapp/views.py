@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def hello_1ban(request):
-    return render(request, 'base.html')
+    return render(request, 'accountapp/hello_1ban.html')
