@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def hello_1ban(request):
-    return HttpResponse('Hello 1반!')
+    return render(request, 'base.html')
