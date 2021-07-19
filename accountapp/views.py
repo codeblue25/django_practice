@@ -5,4 +5,8 @@ from django.shortcuts import render
 
 
 def hello_1ban(request):
-    return render(request, 'accountapp/hello_1ban.html')
+
+    if request.method == 'POST':
+        return render(request, 'accountapp/hello_1ban.html', context={'text': 'POST METHOD!!'})
+    else:
+        return render(request, 'accountapp/hello_1ban.html', context={'text': 'GET METHOD!!'})

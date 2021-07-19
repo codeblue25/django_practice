@@ -1,6 +1,15 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<div class="contents">login page</div>
+<div class="contents">
+    <h1>Login</h1>
+    <form action="/account/hello_1ban/" method="post">
+        {% csrf_token %}
+        <button type="submit">Submit!</button>
+    </form>
+
+        {{ text }}
+
+</div>
 
 {% endblock %}
