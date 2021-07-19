@@ -5,11 +5,15 @@
     <h1>Login</h1>
     <form action="/account/hello_1ban/" method="post">
         {% csrf_token %}
-        <button type="submit">Submit!</button>
+        <div>
+            <input type="text" placeholder="Your ID" minlength="5" maxlength="13" required name="user_id" />
+        </div>
+        <button type="submit" value="POST!">Submit!</button>
     </form>
 
-        {{ text }}
-
+    {% if user_output %}
+        {{ user_output.text }}
+    {% endif %}
 </div>
 
 {% endblock %}
