@@ -11,8 +11,10 @@
         <button type="submit" value="POST!">Submit!</button>
     </form>
 
-    {% if user_output %}
-        {{ user_output.text }}
+    {% if user_list %}
+        {% for user in user_list %}
+            {{ user.text }}
+        {% endfor %}
     {% endif %}
 </div>
 
