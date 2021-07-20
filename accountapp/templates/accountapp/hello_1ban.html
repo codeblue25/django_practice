@@ -2,18 +2,21 @@
 
 {% block content %}
 <div class="contents">
-    <h1>Login</h1>
-    <form action="/account/hello_1ban/" method="post">
+    <h3>Login</h3>
+    <form action="/account/hello_1ban/" method="post" class="login_form">
         {% csrf_token %}
         <div>
             <input type="text" placeholder="Your ID" minlength="5" maxlength="13" required name="user_id" />
+        </div>
+        <div>
+            <input type="password" placeholder="Your PW" minlength="6" required name="user_pw" />
         </div>
         <button type="submit" value="POST!">Submit!</button>
     </form>
 
     {% if user_list %}
-        {% for user in user_list %}
-            {{ user.text }}
+        {% for users in user_list %}
+            {{ users.text }}
         {% endfor %}
     {% endif %}
 </div>
