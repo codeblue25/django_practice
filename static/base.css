@@ -1,4 +1,4 @@
-.wrap{
+.wrap {
     display: flex;
     flex-direction: column;
     /*justify-content: center;*/
@@ -22,7 +22,12 @@
     width: 20rem;
     height: 30rem;
     background-color: #bbb;
+    text-align: center;
     /*margin: 2rem*/
+}
+
+.contents h3 {
+    text-align: center;
 }
 
 .footer_logo {
@@ -32,6 +37,6 @@
     text-align: center;
 }
 
-.footer_logo h5{
+.footer_logo h5 {
     font-family: 'Lobster Two', cursive;
 }

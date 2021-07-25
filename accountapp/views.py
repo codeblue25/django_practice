@@ -27,6 +27,7 @@ def hello_1ban(request):
         user_list = User.objects.all()
         return render(request, 'accountapp/hello_1ban.html', context={'user_list': user_list})
 
+
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
